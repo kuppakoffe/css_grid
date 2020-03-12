@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 2fr 3fr;
+        grid-auto-rows: minmax(100px, auto);
+        grid-gap: 1em;
+        justify-items: stretch;
+        align-items: stretch;
+      }
+
+      .wrapper > div {
+        background: #eee;
+        padding: 1em;
+      }
+
+      .wrapper > div:nth-child(odd) {
+        background: #ddd;
+      }
+
+      .box1 {
+        align-self: start;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="box box 1">Box 1</div>
+      <div class="box box 2">Box 2</div>
+      <div class="box box 3">Box 3</div>
+      <div class="box box 4">Box 4</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .nested {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 70px;
+        grid-gap: 1em;
+      }
+
+      .nested > div {
+        border: 1px solid #333;
+        padding: 1em;
+      }
+      .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1em;
+        grid-auto-rows: minmax(10px, auto);
+      }
+
+      .wrapper > div {
+        background: #eee;
+        padding: 1em;
+      }
+
+      .wrapper > div:nth-child(odd) {
+        background: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div>
+        Lorem ipsum dolor sit.
+      </div>
+      <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, distinctio
+        quas? Libero possimus distinctio neque provident, vitae voluptas
+        architecto autem earum deleniti sunt minima, sint totam inventore, non
+        ducimus magni quaerat tenetur molestias? Cum doloremque rem voluptatem a
+        distinctio accusamus esse odio temporibus! Similique quos illo natus
+        ipsam harum.
+      </div>
+      <div class="nested">
+        <div>Lorem</div>
+        <div>Lorem</div>
+        <div>Lorem</div>
+        <div>Lorem</div>
+        <div>Lorem</div>
+        <div>Lorem</div>
+        <div>Lorem</div>
+        <div>Lorem</div>
+        <div>Lorem</div>
+      </div>
+      <div>
+        Lorem ipsum dolor sit.
+      </div>
+      <div>
+        Lorem ipsum dolor sit.
+      </div>
+      <div>
+        Lorem ipsum dolor sit.
+      </div>
+      <div>
+        Lorem ipsum dolor sit.
+      </div>
+    </div>
+  </body>
+</html>
